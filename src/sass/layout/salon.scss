@@ -1,0 +1,86 @@
+.salon {
+  min-height: calc(100vh - 9rem - 11rem);
+  margin-top: 6rem;
+  margin-bottom: 5rem;
+  h2 {
+    color: $blanco;
+  }
+  .salon-header {
+    height: 50rem;
+    h1 {
+      text-transform: uppercase;
+      color: $blanco;
+      position: absolute;
+      top: 20rem;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 5rem;
+      @include tablet {
+        font-size: 8rem;
+      }
+    }
+  }
+}
+
+.salon-content {
+  display: flex;
+  flex-direction: column;
+}
+.content-info {
+  margin: $separacion auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  color: black;
+  gap: 1rem;
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.info {
+  border-bottom: 1px solid rgb(114, 114, 114);
+
+  &:last-of-type {
+    margin-bottom: 3rem;
+  }
+  @include tablet {
+    border: none;
+  }
+  h4 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    &:first-of-type {
+      margin-top: 3rem;
+    }
+  }
+  img {
+    height: 4rem;
+  }
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.galeria-salon {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  img {
+    width: 100%;
+  }
+}

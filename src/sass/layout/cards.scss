@@ -1,0 +1,96 @@
+.cards {
+  h2 {
+    margin: 3rem auto 1rem auto;
+  }
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.tarjetero {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tarjetero-cuerpo {
+  max-width: 30rem;
+  width: 100%;
+  height: 35rem;
+  margin: 0 auto;
+  -webkit-perspective: 800;
+  &:hover .tarjeta {
+    transform: rotateY(180deg);
+  }
+  &:last-of-type {
+    @include desktop {
+      grid-column: 2 / 3;
+    }
+  }
+}
+.tarjeta {
+  background-color: $blanco;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.7s ease-in-out;
+  border-radius: 1rem;
+  .adelante,
+  .atras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 1rem;
+  }
+
+  .atras {
+    transform: rotateY(180deg);
+    background-color: rgb(206, 109, 109);
+    ul {
+      position: absolute;
+      top: 7rem;
+      left: 0;
+      right: 0;
+      list-style-type: none;
+      font-size: 1.8rem;
+      padding: 0;
+      li {
+        margin-bottom: 3rem;
+        color: $blanco;
+      }
+    }
+  }
+  .adelante {
+    color: $blanco;
+    h3 {
+      margin-top: 2rem;
+      color: $blanco;
+    }
+    h4 {
+      display: block;
+      position: absolute;
+      bottom: 2rem;
+      left: 0;
+      right: 0;
+      padding: 1rem 2rem;
+      background-color: $bordo-rgba;
+      margin: 0 5rem;
+      border-radius: 0.5rem;
+      z-index: 10;
+      border: 1px solid $blanco;
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+}

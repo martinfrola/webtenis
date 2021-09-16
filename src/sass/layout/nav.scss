@@ -1,0 +1,217 @@
+.nav-bg {
+  background-color: $bordo;
+  height: 6rem;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+}
+.nav-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+  @include desktop {
+    width: 90%;
+
+    margin: 0 auto;
+  }
+
+  .btn {
+    margin: 0;
+    padding: 0.8rem 3rem;
+  }
+  p {
+    color: $blanco;
+    &:hover {
+      font-size: 1.6rem;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  .ocultar-logo {
+    display: none;
+  }
+}
+.right-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-logo {
+  height: 6rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 998;
+  background-color: $bordo-rgba;
+  backdrop-filter: blur(5px);
+  height: 0rem;
+  width: 20rem;
+  transition: height 0s ease;
+  margin-top: 0;
+  @include desktop {
+    flex-direction: row;
+    height: 2rem;
+    background-color: $bordo;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  a {
+    opacity: 0;
+    transition: opacity 0s ease;
+    font-size: 2rem;
+    padding: 1rem auto;
+    color: $blanco;
+    transition: transform 0.3s ease;
+    @include desktop {
+      padding: 2rem 1rem;
+      opacity: 1;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.menu-btn {
+  display: block;
+  @include desktop {
+    display: none;
+  }
+  background-color: $bordo;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  width: 6rem;
+  height: 6rem;
+  span {
+    border-radius: 5px;
+    background-color: $blanco;
+    display: block;
+    width: 60%;
+    margin: 0.5rem auto;
+    height: 0.3rem;
+
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.view {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 6rem);
+  transition: height 1s ease;
+  a {
+    opacity: 1;
+    margin: 1rem 1rem;
+    transition: opacity 1s ease 1s;
+    &:last-of-type {
+      text-decoration: 1px underline;
+    }
+  }
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+//Animation
+.open {
+  .top-line {
+    animation-name: top-line-animation;
+  }
+  .middle-line {
+    animation-name: middle-line-animation;
+  }
+  .bottom-line {
+    animation-name: bottom-line-animation;
+  }
+}
+
+.top-line {
+  animation-name: top-line-animation-close;
+}
+.middle-line {
+  animation-name: middle-line-animation-close;
+}
+.bottom-line {
+  animation-name: bottom-line-animation-close;
+}
+
+@keyframes top-line-animation {
+  50%,
+  100% {
+    margin: 0.01rem auto;
+    transform: translateY(3px) rotate(-45deg);
+  }
+}
+@keyframes bottom-line-animation {
+  50%,
+  100% {
+    margin: 0.01rem auto;
+    transform: translateY(-3px) rotate(45deg);
+  }
+}
+@keyframes middle-line-animation {
+  50%,
+  100% {
+    margin: 0 auto;
+    transform: translateX(50px);
+    opacity: 0;
+  }
+}
+@keyframes top-line-animation-close {
+  0% {
+    margin: 0.01rem auto;
+    transform: translateY(3px) rotate(-45deg);
+  }
+  50%,
+  100% {
+    margin: 0.5rem auto;
+    transform: translateY(0) rotate(0);
+  }
+}
+@keyframes bottom-line-animation-close {
+  0% {
+    margin: 0.01rem auto;
+    transform: translateY(-3px) rotate(45deg);
+  }
+  50%,
+  100% {
+    margin: 0.5rem auto;
+    transform: translateY(0) rotate(0);
+  }
+}
+@keyframes middle-line-animation-close {
+  0% {
+    margin: 0 auto;
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  50%,
+  100% {
+    margin: 0.5 auto;
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.hide {
+  display: none;
+  @include desktop {
+    display: flex;
+  }
+}

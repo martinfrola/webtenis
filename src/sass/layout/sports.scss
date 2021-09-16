@@ -1,0 +1,39 @@
+.sport-page {
+  min-height: calc(100vh - 9rem - 10rem);
+  margin-top: 10rem;
+}
+.sports {
+  padding: $separacion 0 $separacion 0;
+  width: 90%;
+  max-width: 100rem;
+  background-color: $bordo-rgba;
+  backdrop-filter: blur(5px);
+
+  margin: 0 auto 3rem auto;
+  border-radius: 1rem;
+  .chose-sport {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+  .costo-turno {
+    padding-top: 2rem;
+    color: $blanco;
+  }
+  .sport-btn {
+    padding: 2rem 10rem;
+    width: 90%;
+    max-width: 30rem;
+    margin: 0 auto;
+    border: 0.5rem solid rgba($color: #000000, $alpha: 0.6);
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: $bold;
+    border-radius: 1.5rem;
+  }
+}

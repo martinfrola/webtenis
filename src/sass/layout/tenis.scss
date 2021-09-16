@@ -1,0 +1,71 @@
+.form-page {
+  min-height: calc(100vh - 9rem - 5rem - 5rem);
+  margin-top: 11rem;
+}
+.tenis {
+  display: flex;
+  flex-direction: column;
+  color: $blanco;
+  gap: 0;
+  padding: 1rem 0 3rem 0;
+  margin: 5rem auto;
+  h3 {
+    margin: 2rem auto;
+  }
+}
+
+.fecha-hora,
+.datos {
+  display: Flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  gap: 2rem;
+  @include tablet {
+    flex-direction: row;
+  }
+  .campo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.5rem;
+    align-items: center;
+    input,
+    select {
+      width: 100%;
+      height: 3rem;
+      border-radius: 0.5rem;
+      border: 1px solid $gris;
+      &:focus {
+        outline: none;
+        border: 3px solid $gris;
+      }
+    }
+    @include tablet {
+      flex-direction: row;
+      label {
+        flex: 0 0 7rem;
+      }
+      input,
+      select {
+        flex: 1;
+      }
+    }
+  }
+}
+
+.btn-submit {
+  margin-top: 3rem;
+}
+
+.btn-volver {
+  width: 90%;
+  text-align: left;
+  margin: 0 auto;
+}
+.form-turno {
+  p {
+    margin-top: 1rem;
+  }
+}

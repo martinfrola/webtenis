@@ -1,0 +1,45 @@
+.header {
+  background: url(./img/bg-2.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.foto-1 {
+  background: url(./img/alberto.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.foto-2 {
+  background: url(./img/javier.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.foto-3 {
+  background: url(./img/franco.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.foto-4 {
+  background: url(./img/juampi.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.salon-header {
+  background-image: url(./img/salon-3.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home-salon {
+  background-image: url(./img/salon-3.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

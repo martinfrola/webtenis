@@ -1,0 +1,60 @@
+footer {
+  color: $blanco;
+}
+
+.info-master {
+  margin-bottom: $separacion;
+
+  width: 100%;
+  padding: 2rem 0;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  @include tablet {
+    width: 60%;
+  }
+  h3 {
+    margin-top: 1rem;
+    color: $blanco;
+    margin-bottom: 2rem;
+  }
+  h4 {
+    color: $blanco;
+    font-size: 1.8rem;
+    margin: 2rem auto 1rem 0;
+  }
+}
+.redes {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 1rem auto 2rem auto;
+  .img-redes {
+    text-align: center;
+    text-decoration: none;
+    color: $blanco;
+    img {
+      transition: transform 2s ease;
+      &:hover {
+        transform: rotate(360deg);
+        scale: 1.1;
+      }
+    }
+  }
+}
+
+.direccion {
+  height: 9rem;
+  margin: 0;
+  padding: 1rem 0;
+  p {
+    &:first-of-type {
+      margin-bottom: 2rem;
+    }
+  }
+
+  a {
+    font-size: 1.5rem;
+    color: $blanco;
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,40 @@
+.home {
+  min-height: calc(100vh - 7rem - 9rem);
+}
+.home-salon {
+  height: 40rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: $separacion 0;
+  position: relative;
+  h2 {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    color: $blanco;
+  }
+  a {
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+  }
+  .salon-info {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+    img {
+      width: 100%;
+      margin-bottom: 2rem;
+      @include tablet {
+        width: 50%;
+      }
+    }
+  }
+}
